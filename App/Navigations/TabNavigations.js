@@ -17,7 +17,7 @@ export default function TabNavigation() {
         tabBarActiveBackgroundColor: '#35166e',
         headerStyle: { height: 80, backgroundColor: '#6834d4' },
         tabBarStyle: { backgroundColor: '#6834d4', height: 60 },
-        tabBarLabelStyle: { color: 'white' },
+        tabBarLabelStyle: { color: 'white', paddingBottom: 5 },
       }}
     >
       <Tab.Screen
