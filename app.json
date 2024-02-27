@@ -32,6 +32,12 @@
         "projectId": "85ef2052-8b4b-466b-afe2-c86df25230ac"
       }
     },
-    "owner": "tiger1925"
+    "owner": "tiger1925",
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/85ef2052-8b4b-466b-afe2-c86df25230ac"
+    }
   }
 }

@@ -12,12 +12,12 @@ export default function TabNavigation() {
   return (
     <Tab.Navigator
       screenOptions={{
-        headerTintColor: 'white',
-        tabBarInactiveBackgroundColor: '#6834d4',
-        tabBarActiveBackgroundColor: '#35166e',
-        headerStyle: { height: 80, backgroundColor: '#6834d4' },
-        tabBarStyle: { backgroundColor: '#6834d4', height: 60 },
-        tabBarLabelStyle: { color: 'white', paddingBottom: 5 },
+        headerTintColor: '#0c2233',
+        tabBarInactiveBackgroundColor: '#f4eeff',
+        tabBarActiveBackgroundColor: 'white',
+        headerStyle: { height: 80, backgroundColor: '#f4eeff' },
+        tabBarStyle: { backgroundColor: '#f4eeff', height: 60 },
+        tabBarLabelStyle: { color: '#0c2233', paddingBottom: 5 },
       }}
     >
       <Tab.Screen
@@ -25,7 +25,7 @@ export default function TabNavigation() {
         component={Home}
         options={{
           tabBarIcon: ({ size }) => (
-            <Entypo name="home" size={size} color={'white'} />
+            <Entypo name="home" size={size} color={'#0c2233'} />
           ),
         }}
       />
@@ -34,7 +34,7 @@ export default function TabNavigation() {
         component={Transactions}
         options={{
           tabBarIcon: ({ size }) => (
-            <FontAwesome name="history" size={size} color={'white'} />
+            <FontAwesome name="history" size={size} color={'#0c2233'} />
           ),
         }}
       />
@@ -46,7 +46,7 @@ export default function TabNavigation() {
             <FontAwesome6
               name="money-bill-transfer"
               size={size}
-              color={'white'}
+              color={'#0c2233'}
             />
           ),
         }}
@@ -56,7 +56,7 @@ export default function TabNavigation() {
         component={Profile}
         options={{
           tabBarIcon: ({ size }) => (
-            <FontAwesome name="user" size={size} color={'white'} />
+            <FontAwesome name="user" size={size} color={'#0c2233'} />
           ),
         }}
       />

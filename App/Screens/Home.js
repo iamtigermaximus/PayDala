@@ -142,7 +142,7 @@ export default function Home(props) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6834d4',
+    backgroundColor: '#f4eeff',
   },
   choicesContainer: {
     display: 'flex',
