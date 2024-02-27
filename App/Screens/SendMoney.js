@@ -272,7 +272,7 @@ export default function SendMoney() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6834d4',
+    backgroundColor: '#f4eeff',
   },
   text: {
     color: '#010101',
@@ -285,7 +285,7 @@ const styles = StyleSheet.create({
   },
   sectionTitle: {
     fontSize: 13,
-    color: 'white',
+    color: '#0c2233',
     paddingBottom: 5,
   },
   input: {
@@ -293,13 +293,21 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     padding: 10,
     fontSize: 16,
+    shadowColor: 'gray',
+    shadowOffset: {
+      width: 0,
+      height: 0.5,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   contactsSection: {
     paddingVertical: 10,
   },
   contactsTitle: {
-    fontSize: 16,
-    color: 'white',
+    fontSize: 13,
+    color: '#0c2233',
   },
   scrollView: {
     backgroundColor: '#f4eeff',
