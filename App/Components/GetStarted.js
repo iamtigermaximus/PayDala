@@ -14,7 +14,7 @@ export default function GetStarted() {
         <View style={styles.linkContainer}>
           <View style={styles.linkItemContainer}>
             <Text style={styles.linkItemIcon}>
-              <MaterialCommunityIcons name="bank" size={35} color="black" />
+              <MaterialCommunityIcons name="bank" size={35} color="#0c2233" />
             </Text>
             <View style={styles.linkItem}>
               <Text style={styles.linkItemHeader}>Link a Finnish bank</Text>
@@ -25,7 +25,11 @@ export default function GetStarted() {
           </View>
           <View>
             <Text>
-              <Entypo name="chevron-with-circle-right" size={30} color="gray" />
+              <Entypo
+                name="chevron-with-circle-right"
+                size={30}
+                color="#0c2233"
+              />
             </Text>
           </View>
         </View>
@@ -35,7 +39,7 @@ export default function GetStarted() {
               <MaterialIcons
                 name="account-balance-wallet"
                 size={30}
-                color="black"
+                color="#0c2233"
               />
             </Text>
             <View style={styles.linkItem}>
@@ -47,14 +51,18 @@ export default function GetStarted() {
           </View>
           <View>
             <Text>
-              <Entypo name="chevron-with-circle-right" size={30} color="gray" />
+              <Entypo
+                name="chevron-with-circle-right"
+                size={30}
+                color="#0c2233"
+              />
             </Text>
           </View>
         </View>
         <View style={styles.linkContainer}>
           <View style={styles.linkItemContainer}>
             <Text style={styles.linkItemIcon}>
-              <MaterialCommunityIcons name="bank" size={35} color="black" />
+              <MaterialCommunityIcons name="bank" size={35} color="#0c2233" />
             </Text>
             <View style={styles.linkItem}>
               <Text style={styles.linkItemHeader}>
@@ -67,7 +75,11 @@ export default function GetStarted() {
           </View>
           <View>
             <Text>
-              <Entypo name="chevron-with-circle-right" size={30} color="gray" />
+              <Entypo
+                name="chevron-with-circle-right"
+                size={30}
+                color="#0c2233"
+              />
             </Text>
           </View>
         </View>
@@ -77,20 +89,26 @@ export default function GetStarted() {
         <View style={styles.linkContainer}>
           <View style={styles.linkItemContainer}>
             <Text style={styles.linkItemIcon}>
-              <MaterialCommunityIcons name="bank" size={35} color="black" />
+              <MaterialCommunityIcons
+                name="calendar-month"
+                size={35}
+                color="#0c2233"
+              />
             </Text>
             <View style={styles.linkItem}>
-              <Text style={styles.linkItemHeader}>
-                Link a PH payment method
-              </Text>
+              <Text style={styles.linkItemHeader}>Schedule a transfer</Text>
               <Text style={styles.linkItemSubtext}>
-                Send to FI from a PH bank
+                Set up repeating payments
               </Text>
             </View>
           </View>
           <View>
             <Text>
-              <Entypo name="chevron-with-circle-right" size={30} color="gray" />
+              <Entypo
+                name="chevron-with-circle-right"
+                size={30}
+                color="#0c2233"
+              />
             </Text>
           </View>
         </View>

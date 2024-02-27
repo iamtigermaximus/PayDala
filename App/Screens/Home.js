@@ -71,7 +71,7 @@ export default function Home(props) {
               <MaterialCommunityIcons
                 name="swap-horizontal-circle"
                 size={24}
-                color="black"
+                color="#0c2233"
               />
             </View>
             <View style={styles.currency}>
