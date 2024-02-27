@@ -181,6 +181,14 @@ const styles = StyleSheet.create({
     gap: 5,
     paddingHorizontal: 10,
     paddingVertical: 20,
+    shadowColor: 'gray',
+    shadowOffset: {
+      width: 0,
+      height: 0.5,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   itemsContainer: {
     display: 'flex',
@@ -212,7 +220,7 @@ const styles = StyleSheet.create({
     color: '#0c2233',
   },
   scrollView: {
-    backgroundColor: '#6834d4',
+    backgroundColor: '#f4eeff',
     gap: 20,
   },
 });
