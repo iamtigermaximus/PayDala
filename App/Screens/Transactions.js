@@ -234,7 +234,7 @@ export default function Transactions() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#6834d4',
+    backgroundColor: '#f4eeff',
   },
   text: {
     color: '#010101',
@@ -245,8 +245,9 @@ const styles = StyleSheet.create({
   navBar: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    backgroundColor: '#6834d4',
+    backgroundColor: '#f4eeff',
     paddingVertical: 20,
+    color: '#0c2233',
   },
   tab: {
     flex: 1,
@@ -254,10 +255,10 @@ const styles = StyleSheet.create({
   },
   activeTab: {
     borderBottomWidth: 1,
-    borderBottomColor: 'white',
+    borderBottomColor: '#0c2233',
   },
   tabText: {
-    color: 'white',
+    color: '#0c2233',
     fontSize: 14,
     paddingBottom: 10,
     fontWeight: '700',
@@ -267,12 +268,20 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    borderWidth: 1,
+    // borderWidth: 1,
     paddingHorizontal: 10,
     paddingVertical: 5,
     margin: 2,
     borderRadius: 10,
-    backgroundColor: '#f4eeff',
+    backgroundColor: 'white',
+    shadowColor: 'gray',
+    shadowOffset: {
+      width: 0,
+      height: 0.5,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    elevation: 5,
   },
   transactionName: {
     fontSize: 16,
