@@ -41,86 +41,94 @@ export default function GetStarted() {
             </View>
           </View>
         </TouchableOpacity>
-
-        <View style={styles.linkContainer}>
-          <View style={styles.linkItemContainer}>
-            <Text style={styles.linkItemIcon}>
-              <MaterialIcons
-                name="account-balance-wallet"
-                size={30}
-                color="#0c2233"
-              />
-            </Text>
-            <View style={styles.linkItem}>
-              <Text style={styles.linkItemHeader}>Add a PH bank/e-wallet</Text>
-              <Text style={styles.linkItemSubtext}>
-                Receive PHP from your family and friends
+        <TouchableOpacity onPress={() => goToRoute('LinkPhBank')}>
+          <View style={styles.linkContainer}>
+            <View style={styles.linkItemContainer}>
+              <Text style={styles.linkItemIcon}>
+                <MaterialIcons
+                  name="account-balance-wallet"
+                  size={30}
+                  color="#0c2233"
+                />
+              </Text>
+              <View style={styles.linkItem}>
+                <Text style={styles.linkItemHeader}>
+                  Add a PH bank/e-wallet
+                </Text>
+                <Text style={styles.linkItemSubtext}>
+                  Receive PHP from your family and friends
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={30}
+                  color="#0c2233"
+                />
               </Text>
             </View>
           </View>
-          <View>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={30}
-                color="#0c2233"
-              />
-            </Text>
-          </View>
-        </View>
-        <View style={styles.linkContainer}>
-          <View style={styles.linkItemContainer}>
-            <Text style={styles.linkItemIcon}>
-              <MaterialCommunityIcons name="bank" size={35} color="#0c2233" />
-            </Text>
-            <View style={styles.linkItem}>
-              <Text style={styles.linkItemHeader}>
-                Link a PH payment method
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToRoute('LinkPhPaymentMethod')}>
+          <View style={styles.linkContainer}>
+            <View style={styles.linkItemContainer}>
+              <Text style={styles.linkItemIcon}>
+                <MaterialCommunityIcons name="bank" size={35} color="#0c2233" />
               </Text>
-              <Text style={styles.linkItemSubtext}>
-                Send to FI from a PH bank
+              <View style={styles.linkItem}>
+                <Text style={styles.linkItemHeader}>
+                  Link a PH payment method
+                </Text>
+                <Text style={styles.linkItemSubtext}>
+                  Send to FI from a PH bank
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={30}
+                  color="#0c2233"
+                />
               </Text>
             </View>
           </View>
-          <View>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={30}
-                color="#0c2233"
-              />
-            </Text>
-          </View>
-        </View>
+        </TouchableOpacity>
       </View>
+
       <View style={styles.container}>
         <Text style={styles.sectionTitle}>Scheduled transfers</Text>
-        <View style={styles.linkContainer}>
-          <View style={styles.linkItemContainer}>
-            <Text style={styles.linkItemIcon}>
-              <MaterialCommunityIcons
-                name="calendar-month"
-                size={35}
-                color="#0c2233"
-              />
-            </Text>
-            <View style={styles.linkItem}>
-              <Text style={styles.linkItemHeader}>Schedule a transfer</Text>
-              <Text style={styles.linkItemSubtext}>
-                Set up repeating payments
+        <TouchableOpacity onPress={() => goToRoute('ScheduledTransfers')}>
+          <View style={styles.linkContainer}>
+            <View style={styles.linkItemContainer}>
+              <Text style={styles.linkItemIcon}>
+                <MaterialCommunityIcons
+                  name="calendar-month"
+                  size={35}
+                  color="#0c2233"
+                />
+              </Text>
+              <View style={styles.linkItem}>
+                <Text style={styles.linkItemHeader}>Schedule a transfer</Text>
+                <Text style={styles.linkItemSubtext}>
+                  Set up repeating payments
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={30}
+                  color="#0c2233"
+                />
               </Text>
             </View>
           </View>
-          <View>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={30}
-                color="#0c2233"
-              />
-            </Text>
-          </View>
-        </View>
+        </TouchableOpacity>
       </View>
     </View>
   );

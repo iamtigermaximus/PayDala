@@ -42,6 +42,7 @@ export default function TabNavigation() {
         name="Send Money"
         component={SendMoney}
         options={{
+          headerTitle: 'Select a recipient',
           tabBarIcon: ({ size }) => (
             <FontAwesome6
               name="money-bill-transfer"
