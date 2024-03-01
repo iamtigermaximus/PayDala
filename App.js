@@ -13,6 +13,7 @@ import EWallets from './App/Screens/profile-screens/EWallets';
 import Settings from './App/Screens/profile-screens/Settings';
 import HelpSupport from './App/Screens/profile-screens/HelpSupport';
 import About from './App/Screens/profile-screens/About';
+import SendMoney from './App/Screens/SendMoney';
 
 const Stack = createNativeStackNavigator();
 
@@ -80,6 +81,11 @@ export default function App() {
             name="About"
             component={About}
             options={{ headerTitle: 'About' }}
+          />
+          <Stack.Screen
+            name="SendMoney"
+            component={SendMoney}
+            options={{ headerTitle: 'Select a recipient' }}
           />
         </Stack.Navigator>
       </NavigationContainer>

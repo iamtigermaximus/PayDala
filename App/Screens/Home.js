@@ -17,31 +17,43 @@ import {
 } from '@expo/vector-icons';
 import GetStarted from '../Components/GetStarted';
 import CountryFlag from 'react-native-country-flag';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Home(props) {
   const [number, onChangeNumber] = useState('');
   const { onPress, title = 'Continue' } = props;
 
+  const navigation = useNavigation();
+
+  const handleNavigation = (screenName) => {
+    navigation.navigate(screenName);
+  };
+
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.container}>
         <View style={styles.sendChoicesContainer}>
-          <View style={styles.choicesContainer}>
-            <View style={styles.choicesItem}>
-              <Text>
-                <Foundation name="euro" size={30} color="white" />
-              </Text>
+          <Pressable onPress={() => handleNavigation('SendMoney')}>
+            <View style={styles.choicesContainer}>
+              <View style={styles.choicesItem}>
+                <Text>
+                  <Foundation name="euro" size={30} color="white" />
+                </Text>
+              </View>
+              <Text style={styles.choicesSubtext}>Send to FI</Text>
             </View>
-            <Text style={styles.choicesSubtext}>Send to FI</Text>
-          </View>
-          <View style={styles.choicesContainer}>
-            <View style={styles.choicesItem}>
-              <Text>
-                <FontAwesome6 name="peso-sign" size={20} color="white" />
-              </Text>
+          </Pressable>
+          <Pressable onPress={() => handleNavigation('SendMoney')}>
+            <View style={styles.choicesContainer}>
+              <View style={styles.choicesItem}>
+                <Text>
+                  <FontAwesome6 name="peso-sign" size={20} color="white" />
+                </Text>
+              </View>
+              <Text style={styles.choicesSubtext}>Send to PH</Text>
             </View>
-            <Text style={styles.choicesSubtext}>Send to PH</Text>
-          </View>
+          </Pressable>
+
           <View style={styles.choicesContainer}>
             <View style={styles.choicesItem}>
               <Text>
