@@ -1,4 +1,10 @@
-import { View, Text, StyleSheet, ScrollView } from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
 import {
   Entypo,
@@ -8,140 +14,161 @@ import {
   FontAwesome5,
   FontAwesome,
 } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 export default function Profile() {
+  const navigation = useNavigation();
+
+  const goToRoute = (routeName) => {
+    navigation.navigate(routeName);
+  };
+
   return (
     <ScrollView style={styles.scrollView}>
       <View style={styles.personalDetailsContainer}>
-        <View style={styles.itemsContainer}>
-          <View style={styles.itemContainer}>
-            <Text style={styles.itemIcon}>
-              <FontAwesome5 name="user-alt" size={25} color="#0c2233" />
-            </Text>
-            <Text style={styles.item}>Personal information</Text>
+        <TouchableOpacity onPress={() => goToRoute('PersonalInfo')}>
+          <View style={styles.itemsContainer}>
+            <View style={styles.itemContainer}>
+              <Text style={styles.itemIcon}>
+                <FontAwesome5 name="user-alt" size={25} color="#0c2233" />
+              </Text>
+              <Text style={styles.item}>Personal information</Text>
+            </View>
+            <View style={styles.itemIcon}>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={20}
+                  color="#0c2233"
+                />
+              </Text>
+            </View>
           </View>
-          <View style={styles.itemIcon}>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={20}
-                color="#0c2233"
-              />
-            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToRoute('CodeBiometry')}>
+          <View style={styles.itemsContainer}>
+            <View style={styles.itemContainer}>
+              <Text style={styles.itemIcon}>
+                <Ionicons name="lock-closed-sharp" size={27} color="#0c2233" />
+              </Text>
+              <Text style={styles.item}>Code and biometry</Text>
+            </View>
+            <View style={styles.itemIcon}>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={20}
+                  color="#0c2233"
+                />
+              </Text>
+            </View>
           </View>
-        </View>
-        <View style={styles.itemsContainer}>
-          <View style={styles.itemContainer}>
-            <Text style={styles.itemIcon}>
-              <Ionicons name="lock-closed-sharp" size={27} color="#0c2233" />
-            </Text>
-            <Text style={styles.item}>Code and biometry</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToRoute('CardsAccounts')}>
+          <View style={styles.itemsContainer}>
+            <View style={styles.itemContainer}>
+              <Text style={styles.itemIcon}>
+                <MaterialCommunityIcons name="bank" size={30} color="#0c2233" />
+              </Text>
+              <Text style={styles.item}>Cards and accounts</Text>
+            </View>
+            <View style={styles.itemIcon}>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={20}
+                  color="#0c2233"
+                />
+              </Text>
+            </View>
           </View>
-          <View style={styles.itemIcon}>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={20}
-                color="#0c2233"
-              />
-            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToRoute('EWallets')}>
+          <View style={styles.itemsContainer}>
+            <View style={styles.itemContainer}>
+              <Text style={styles.itemIcon}>
+                <MaterialIcons
+                  name="account-balance-wallet"
+                  size={30}
+                  color="#0c2233"
+                />
+              </Text>
+              <Text style={styles.item}>E-wallets</Text>
+            </View>
+            <View style={styles.itemIcon}>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={20}
+                  color="#0c2233"
+                />
+              </Text>
+            </View>
           </View>
-        </View>
-        <View style={styles.itemsContainer}>
-          <View style={styles.itemContainer}>
-            <Text style={styles.itemIcon}>
-              <MaterialCommunityIcons name="bank" size={30} color="#0c2233" />
-            </Text>
-            <Text style={styles.item}>Cards and accounts</Text>
-          </View>
-          <View style={styles.itemIcon}>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={20}
-                color="#0c2233"
-              />
-            </Text>
-          </View>
-        </View>
-        <View style={styles.itemsContainer}>
-          <View style={styles.itemContainer}>
-            <Text style={styles.itemIcon}>
-              <MaterialIcons
-                name="account-balance-wallet"
-                size={30}
-                color="#0c2233"
-              />
-            </Text>
-            <Text style={styles.item}>E-wallets</Text>
-          </View>
-          <View style={styles.itemIcon}>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={20}
-                color="#0c2233"
-              />
-            </Text>
-          </View>
-        </View>
+        </TouchableOpacity>
       </View>
       <View style={styles.personalDetailsContainer}>
-        <View style={styles.itemsContainer}>
-          <View style={styles.itemContainer}>
-            <Text style={styles.itemIcon}>
-              <Ionicons name="settings" size={27} color="#0c2233" />
-            </Text>
-            <Text style={styles.item}>Settings</Text>
+        <TouchableOpacity onPress={() => goToRoute('Settings')}>
+          <View style={styles.itemsContainer}>
+            <View style={styles.itemContainer}>
+              <Text style={styles.itemIcon}>
+                <Ionicons name="settings" size={27} color="#0c2233" />
+              </Text>
+              <Text style={styles.item}>Settings</Text>
+            </View>
+            <View style={styles.itemIcon}>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={20}
+                  color="#0c2233"
+                />
+              </Text>
+            </View>
           </View>
-          <View style={styles.itemIcon}>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={20}
-                color="#0c2233"
-              />
-            </Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToRoute('HelpSupport')}>
+          <View style={styles.itemsContainer}>
+            <View style={styles.itemContainer}>
+              <Text style={styles.itemIcon}>
+                <FontAwesome name="support" size={24} color="#0c2233" />{' '}
+              </Text>
+              <Text style={styles.item}>Help and support</Text>
+            </View>
+            <View style={styles.itemIcon}>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={20}
+                  color="#0c2233"
+                />
+              </Text>
+            </View>
           </View>
-        </View>
-        <View style={styles.itemsContainer}>
-          <View style={styles.itemContainer}>
-            <Text style={styles.itemIcon}>
-              <FontAwesome name="support" size={24} color="#0c2233" />{' '}
-            </Text>
-            <Text style={styles.item}>Help and support</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => goToRoute('About')}>
+          <View style={styles.itemsContainer}>
+            <View style={styles.itemContainer}>
+              <Text style={styles.itemIcon}>
+                <Ionicons
+                  name="information-circle-sharp"
+                  size={30}
+                  color="#0c2233"
+                />
+              </Text>
+              <Text style={styles.item}>About</Text>
+            </View>
+            <View style={styles.itemIcon}>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={20}
+                  color="#0c2233"
+                />
+              </Text>
+            </View>
           </View>
-          <View style={styles.itemIcon}>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={20}
-                color="#0c2233"
-              />
-            </Text>
-          </View>
-        </View>
-        <View style={styles.itemsContainer}>
-          <View style={styles.itemContainer}>
-            <Text style={styles.itemIcon}>
-              <Ionicons
-                name="information-circle-sharp"
-                size={30}
-                color="#0c2233"
-              />
-            </Text>
-            <Text style={styles.item}>About</Text>
-          </View>
-          <View style={styles.itemIcon}>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={20}
-                color="#0c2233"
-              />
-            </Text>
-          </View>
-        </View>
+        </TouchableOpacity>
         <View style={styles.itemsContainer}>
           <View style={styles.itemContainer}>
             <Text style={styles.itemIcon}>

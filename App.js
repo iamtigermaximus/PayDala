@@ -6,6 +6,13 @@ import LinkFiBank from './App/Screens/LinkFiBank';
 import LinkPhBank from './App/Screens/LinkPhBank';
 import LinkPhPaymentMethod from './App/Screens/LinkPhPaymentMethod';
 import ScheduledTransfers from './App/Screens/ScheduledTransfers';
+import PersonalInfo from './App/Screens/profile-screens/PersonalInfo';
+import CodeBiometry from './App/Screens/profile-screens/CodeBiometry';
+import CardsAccounts from './App/Screens/profile-screens/CardsAcoounts';
+import EWallets from './App/Screens/profile-screens/EWallets';
+import Settings from './App/Screens/profile-screens/Settings';
+import HelpSupport from './App/Screens/profile-screens/HelpSupport';
+import About from './App/Screens/profile-screens/About';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +45,41 @@ export default function App() {
             name="ScheduledTransfers"
             component={ScheduledTransfers}
             options={{ headerTitle: 'Select a recipient' }}
+          />
+          <Stack.Screen
+            name="PersonalInfo"
+            component={PersonalInfo}
+            options={{ headerTitle: 'Personal information' }}
+          />
+          <Stack.Screen
+            name="CodeBiometry"
+            component={CodeBiometry}
+            options={{ headerTitle: 'Code and biometry' }}
+          />
+          <Stack.Screen
+            name="CardsAccounts"
+            component={CardsAccounts}
+            options={{ headerTitle: 'Cards and accounts' }}
+          />
+          <Stack.Screen
+            name="EWallets"
+            component={EWallets}
+            options={{ headerTitle: 'E-wallets' }}
+          />
+          <Stack.Screen
+            name="Settings"
+            component={Settings}
+            options={{ headerTitle: 'Settings' }}
+          />
+          <Stack.Screen
+            name="HelpSupport"
+            component={HelpSupport}
+            options={{ headerTitle: 'Help and support' }}
+          />
+          <Stack.Screen
+            name="About"
+            component={About}
+            options={{ headerTitle: 'About' }}
           />
         </Stack.Navigator>
       </NavigationContainer>
