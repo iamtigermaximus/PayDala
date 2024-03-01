@@ -21,7 +21,18 @@ export default function App() {
   return (
     <View style={styles.container}>
       <NavigationContainer>
-        <Stack.Navigator initialRouteName="Tabs">
+        <Stack.Navigator
+          initialRouteName="Tabs"
+          screenOptions={{
+            headerShown: true,
+            gestureEnabled: true,
+            gestureDirection: 'horizontal',
+            transitionSpec: {
+              open: { animation: 'timing', config: { duration: 500 } },
+              close: { animation: 'timing', config: { duration: 500 } },
+            },
+          }}
+        >
           <Stack.Screen
             name="Tabs"
             component={TabNavigation}
