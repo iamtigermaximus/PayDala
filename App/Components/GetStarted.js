@@ -1,38 +1,47 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
 import {
   MaterialCommunityIcons,
   Entypo,
   MaterialIcons,
 } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 
 export default function GetStarted() {
+  const navigation = useNavigation();
+
+  const goToRoute = (routeName) => {
+    navigation.navigate(routeName);
+  };
   return (
     <View>
       <View style={styles.container}>
         <Text style={styles.sectionTitle}>Get started</Text>
-        <View style={styles.linkContainer}>
-          <View style={styles.linkItemContainer}>
-            <Text style={styles.linkItemIcon}>
-              <MaterialCommunityIcons name="bank" size={35} color="#0c2233" />
-            </Text>
-            <View style={styles.linkItem}>
-              <Text style={styles.linkItemHeader}>Link a Finnish bank</Text>
-              <Text style={styles.linkItemSubtext}>
-                Send or receive money securely
+        <TouchableOpacity onPress={() => goToRoute('LinkFiBank')}>
+          <View style={styles.linkContainer}>
+            <View style={styles.linkItemContainer}>
+              <Text style={styles.linkItemIcon}>
+                <MaterialCommunityIcons name="bank" size={35} color="#0c2233" />
+              </Text>
+              <View style={styles.linkItem}>
+                <Text style={styles.linkItemHeader}>Link a Finnish bank</Text>
+                <Text style={styles.linkItemSubtext}>
+                  Send or receive money securely
+                </Text>
+              </View>
+            </View>
+            <View>
+              <Text>
+                <Entypo
+                  name="chevron-with-circle-right"
+                  size={30}
+                  color="#0c2233"
+                />
               </Text>
             </View>
           </View>
-          <View>
-            <Text>
-              <Entypo
-                name="chevron-with-circle-right"
-                size={30}
-                color="#0c2233"
-              />
-            </Text>
-          </View>
-        </View>
+        </TouchableOpacity>
+
         <View style={styles.linkContainer}>
           <View style={styles.linkItemContainer}>
             <Text style={styles.linkItemIcon}>
