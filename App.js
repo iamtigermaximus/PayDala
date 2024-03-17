@@ -14,12 +14,27 @@ import Settings from './App/Screens/profile-screens/Settings';
 import HelpSupport from './App/Screens/profile-screens/HelpSupport';
 import About from './App/Screens/profile-screens/About';
 import SendMoney from './App/Screens/SendMoney';
+import Login from './App/Screens/welcome-screens/Login';
+import Signup from './App/Screens/welcome-screens/Signup';
+import LandingPage from './App/Screens/welcome-screens/Welcome';
+import WelcomePage from './App/Screens/welcome-screens/Welcome';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
     <View style={styles.container}>
+      {/* <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen
+            name="Landing"
+            component={LandingPage}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen name="Login" component={Login} />
+          <Stack.Screen name="Signup" component={Signup} />
+        </Stack.Navigator>
+      </NavigationContainer> */}
       <NavigationContainer>
         <Stack.Navigator
           initialRouteName="Tabs"
