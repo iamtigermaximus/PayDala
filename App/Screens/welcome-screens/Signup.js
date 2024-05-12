@@ -7,15 +7,20 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import RNPickerSelect from 'react-native-picker-select';
+import { useNavigation } from '@react-navigation/native';
 
 const Signup = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [country, setCountry] = useState('');
   const [mobileNumber, setMobileNumber] = useState('');
+  const navigation = useNavigation();
 
   const handleSignup = () => {
-    // Handle signup logic
+    // Perform signup logic
+
+    // Assuming signup is successful
+    navigation.navigate('Login');
   };
 
   return (

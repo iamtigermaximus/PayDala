@@ -6,8 +6,18 @@ import {
   TextInput,
   TouchableOpacity,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 const Login = () => {
+  const navigation = useNavigation();
+
+  const handleLogin = () => {
+    // Perform login logic
+
+    // Assuming login is successful
+    navigation.navigate('Home');
+  };
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
@@ -24,7 +34,7 @@ const Login = () => {
           secureTextEntry={true}
         />
       </View>
-      <TouchableOpacity style={styles.buttonContainer}>
+      <TouchableOpacity style={styles.buttonContainer} onPress={handleLogin}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
