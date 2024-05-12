@@ -1,12 +1,4 @@
-import {
-  View,
-  Text,
-  SafeAreaView,
-  StyleSheet,
-  TextInput,
-  Pressable,
-  ScrollView,
-} from 'react-native';
+import { Text, SafeAreaView, StyleSheet, Pressable } from 'react-native';
 import React, { useState } from 'react';
 import {
   MaterialCommunityIcons,
@@ -45,14 +37,6 @@ const ChoicesContainer = styled.View`
   align-items: center;
   align-self: center;
   gap: 5px;
-  /* shadowColor: 'gray',
-    shadowOffset: {
-      width: 0,
-      height: 0.5,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5, */
 `;
 
 const ChoicesItem = styled.View`
@@ -80,14 +64,6 @@ const RatesContainer = styled.View`
   padding: 20px;
   margin: 10px;
   border-radius: 20px;
-  /* shadowColor: 'gray',
-    shadowOffset: {
-      width: 0,
-      height: 0.5,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 5, */
 `;
 const CurrencyContainer = styled.View`
   display: flex;
